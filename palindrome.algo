@@ -1,0 +1,13 @@
+FUNCTION isPalindrome(str:STRING , left:0, right:str.length-1 ) : BOOLEAN
+VAR
+    res : BOOLEAN
+BEGIN
+    IF (str.[left]!= str[right]) THEN
+        RETURN FALSE
+    IF ELSE (left < right) THEN
+        IF (str[left] == str[right]) THEN
+            isPalindrome (str, ++left, --right)
+        END_IF
+    END_IF
+    RETURN res = TRUE
+END
